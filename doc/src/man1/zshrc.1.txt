@@ -1,0 +1,61 @@
+ZSHRC(1)
+========
+:doctype: manpage
+
+NAME
+----
+zshrc - Zsh configuration as a zplug plugin.
+
+VERSION
+-------
+
+0.0.0
+
+DESCRIPTION
+-----------
+This configuration system works as a meta-plugin:
+all desired Zsh plugins are loaded from packages.zsh using zplug.
+Overall configuration then follows a normal plugin structure.
+
+This document concerns the details of this specific Zsh environment.
+For installation instructions and development information, see
+<https://github.com/makenew/zshrc>.
+
+Update this and all plugins with the included zshupg command.
+
+STRUCTURE
+---------
+
+All packages are loaded in packages.zsh using zplug.
+Environment variables exported in env.zsh are set before loading any plugins.
+
+AUTHOR
+------
+This plugin is authored by Evan Sosenko.
+
+RESOURCES
+---------
+Find the source and latest version at
+<https://github.com/makenew/zshrc>.
+
+SEE ALSO
+--------
+zplug(1)
+
+LICENSE
+-------
+This Zsh configuration is licensed under the MIT license:
+<https://github.com/makenew/zshrc/blob/master/LICENSE.txt>.
+
+WARRANTY
+--------
+This software is provided by the copyright holders and contributors "as is" and
+any express or implied warranties, including, but not limited to, the implied
+warranties of merchantability and fitness for a particular purpose are
+disclaimed. In no event shall the copyright holder or contributors be liable for
+any direct, indirect, incidental, special, exemplary, or consequential damages
+(including, but not limited to, procurement of substitute goods or services;
+loss of use, data, or profits; or business interruption) however caused and on
+any theory of liability, whether in contract, strict liability, or tort
+(including negligence or otherwise) arising in any way out of the use of this
+software, even if advised of the possibility of such damage.
