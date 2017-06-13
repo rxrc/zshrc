@@ -1,8 +1,7 @@
 # Zsh Configuration
 
-[<img src="https://makenew.github.io/makenew.svg" alt="Make New" height="20">](https://makenew.github.io/)
-[![GitHub releases](https://img.shields.io/github/release/makenew/zshrc.svg)](https://github.com/makenew/zshrc/releases)
-[![GitHub license](https://img.shields.io/github/license/makenew/zshrc.svg)](./LICENSE.txt)
+[![GitHub releases](https://img.shields.io/github/release/rxrc/zshrc.svg)](https://github.com/rxrc/zshrc/releases)
+[![GitHub license](https://img.shields.io/github/license/rxrc/zshrc.svg)](./LICENSE.txt)
 
 > Built from [makenew.github.io](https://makenew.github.io/).
 
@@ -23,82 +22,6 @@ Display documentation of this Zsh configuration with
 $ man zshrc
 ```
 
-### Bootstrapping a New Config
-
-1. Clone the master branch of this repository with
-
-   ```
-   $ git clone --single-branch https://github.com/makenew/zshrc.git
-   $ cd zshrc
-   ```
-
-   Optionally, reset to the latest [release][Releases] with
-
-   ```
-   $ git reset --hard zshrc-v1.0.0
-   ```
-
-2. Run
-
-   ```
-   $ ./makenew.sh
-   ```
-
-   and follow the prompts.
-   This will replace the boilerplate, delete itself,
-   stage changes for commit, remove tags, and set upstream.
-   This script assumes the project repository will be hosted on GitHub.
-   For an alternative location, you must update the URLs manually.
-
-3. If [choosing a license][Choose a license] other than the one provided:
-   update `LICENSE.txt` and the README License section with your chosen license.
-
-4. After committing the initial changes, host your `install.sh` on
-   GitHub pages with
-
-   ```
-   $ git checkout --orphan gh-pages
-   $ git reset
-   $ git add install.sh
-   $ git commit -m 'Add install.sh'
-   $ git push --set-upstream origin gh-page
-   $ git clean -fdx
-   $ git checkout master
-   ```
-
-   Then, update the install URLs in this README
-   (optionally, use [Git.io] to shorten them).
-
-5. Document your configuration in `doc/zshrc.1.txt`.
-
-[Choose a license]: http://choosealicense.com/
-[Git.io]: https://git.io/
-[Releases]: https://github.com/makenew/zshrc/releases
-[The Unlicense]: http://unlicense.org/UNLICENSE
-
-### Updating
-
-If you want to pull in future updates from this skeleton,
-you can fetch and merge in changes from this repository.
-
-Add this as a new remote with
-
-```
-$ git remote add upstream https://github.com/makenew/zshrc.git
-```
-
-You can then fetch and merge changes with
-
-```
-$ git fetch --no-tags upstream
-$ git merge upstream/master
-```
-
-#### Changelog
-
-Note that `CHANGELOG.md` is just a template for this skeleton.
-The actual changes for this project are documented in the commit history
-and summarized under [Releases].
 
 ## Installation
 
@@ -132,13 +55,13 @@ $ wget https://git.io/vH987 -O - | sh
 2. Create `$ZDOTDIR/.zshrc` with
 
   ```zsh
-  # makenew/zshrc
+  # rxrc/zshrc
 
   export ZDOTDIR="${ZDOTDIR:-${XDG_CONFIG_HOME:-$HOME/.config}/zsh}"
   export ZPLUG_HOME="${ZPLUG_HOME:-${XDG_CONFIG_HOME:-$HOME/.config}/zplug}"
   export ZPLUG_CACHE_DIR="${ZPLUG_CACHE_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/zplug}"
 
-  zplug_loadfile="${ZPLUG_HOME}/repos/makenew/zshrc/packages.zsh"
+  zplug_loadfile="${ZPLUG_HOME}/repos/rxrc/zshrc/packages.zsh"
 
   if [[ -e $zplug_loadfile ]]; then
     export ZPLUG_LOADFILE=$zplug_loadfile
@@ -147,14 +70,14 @@ $ wget https://git.io/vH987 -O - | sh
   source "${ZPLUG_HOME}/init.zsh"
 
   if [[ ! -e $zplug_loadfile ]]; then
-    zplug 'makenew/zshrc'
+    zplug 'rxrc/zshrc'
     zplug install
     export ZPLUG_LOADFILE=$zplug_loadfile
     source "${ZPLUG_HOME}/init.zsh"
   fi
 
-  zplug 'makenew/zshrc', use:env.zsh
-  zplug 'makenew/zshrc', use:plugin
+  zplug 'rxrc/zshrc', use:env.zsh
+  zplug 'rxrc/zshrc', use:plugin
 
   if ! zplug check; then
     zplug install
@@ -182,10 +105,10 @@ The [zshrc source] is hosted on GitHub.
 Clone the project with
 
 ```
-$ git clone https://github.com/makenew/zshrc.git
+$ git clone https://github.com/rxrc/zshrc.git
 ```
 
-[zshrc source]: https://github.com/makenew/zshrc
+[zshrc source]: https://github.com/rxrc/zshrc
 
 ### Local Development Mode
 
@@ -228,7 +151,7 @@ Please submit and comment on bug reports and feature requests.
 
 To submit a patch:
 
-1. Fork it (https://github.com/makenew/zshrc/fork).
+1. Fork it (https://github.com/rxrc/zshrc/fork).
 2. Create your feature branch (`git checkout -b my-new-feature`).
 3. Make changes.
 4. Commit your changes (`git commit -am 'Add some feature'`).
@@ -236,10 +159,6 @@ To submit a patch:
 6. Create a new Pull Request.
 
 ## License
-
-This software can be used freely, see [The Unlicense].
-The copyright text appearing below and elsewhere in this repository
-is for demonstration purposes only and does not apply to this software.
 
 This Zsh configuration is licensed under the MIT license.
 

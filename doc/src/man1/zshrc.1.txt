@@ -19,7 +19,7 @@ Overall configuration then follows a normal plugin structure.
 
 This document concerns the details of this specific Zsh environment.
 For installation instructions and development information, see
-<https://github.com/makenew/zshrc>.
+<https://github.com/rxrc/zshrc>.
 
 Update this and all plugins with the included zshupg command.
 
@@ -36,7 +36,7 @@ This plugin is authored by Evan Sosenko.
 RESOURCES
 ---------
 Find the source and latest version at
-<https://github.com/makenew/zshrc>.
+<https://github.com/rxrc/zshrc>.
 
 SEE ALSO
 --------
@@ -45,7 +45,7 @@ zplug(1)
 LICENSE
 -------
 This Zsh configuration is licensed under the MIT license:
-<https://github.com/makenew/zshrc/blob/master/LICENSE.txt>.
+<https://github.com/rxrc/zshrc/blob/master/LICENSE.txt>.
 
 WARRANTY
 --------

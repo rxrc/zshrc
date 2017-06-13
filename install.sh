@@ -4,7 +4,7 @@ main () {
   set -e
   set -u
 
-  repo='makenew/zshrc'
+  repo='rxrc/zshrc'
 
   zdotdir="${ZDOTDIR:-${XDG_CONFIG_HOME:-$HOME/.config}/zsh}"
   zplug_home="${ZPLUG_HOME:-${XDG_CONFIG_HOME:-$HOME/.config}/zplug}"
