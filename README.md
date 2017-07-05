@@ -35,7 +35,7 @@ $ man zshrc
    Optionally, reset to the latest [release][Releases] with
 
    ```
-   $ git reset --hard zshrc-v1.0.0
+   $ git reset --hard zshrc-v1.0.1
    ```
 
 2. Run
