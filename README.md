@@ -22,7 +22,6 @@ Display documentation of this Zsh configuration with
 $ man zshrc
 ```
 
-
 ## Installation
 
 Due to the bootstrapping problem,
@@ -54,38 +53,38 @@ $ wget https://git.io/vH987 -O - | sh
 
 2. Create `$ZDOTDIR/.zshrc` with
 
-  ```zsh
-  # rxrc/zshrc
+   ```zsh
+   # rxrc/zshrc
 
-  export ZDOTDIR="${ZDOTDIR:-${XDG_CONFIG_HOME:-$HOME/.config}/zsh}"
-  export ZPLUG_HOME="${ZPLUG_HOME:-${XDG_CONFIG_HOME:-$HOME/.config}/zplug}"
-  export ZPLUG_CACHE_DIR="${ZPLUG_CACHE_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/zplug}"
+   export ZDOTDIR="${ZDOTDIR:-${XDG_CONFIG_HOME:-$HOME/.config}/zsh}"
+   export ZPLUG_HOME="${ZPLUG_HOME:-${XDG_CONFIG_HOME:-$HOME/.config}/zplug}"
+   export ZPLUG_CACHE_DIR="${ZPLUG_CACHE_DIR:-${XDG_CACHE_HOME:-$HOME/.cache}/zplug}"
 
-  zplug_loadfile="${ZPLUG_HOME}/repos/rxrc/zshrc/packages.zsh"
+   zplug_loadfile="${ZPLUG_HOME}/repos/rxrc/zshrc/packages.zsh"
 
-  if [[ -e $zplug_loadfile ]]; then
-    export ZPLUG_LOADFILE=$zplug_loadfile
-  fi
+   if [[ -e $zplug_loadfile ]]; then
+     export ZPLUG_LOADFILE=$zplug_loadfile
+   fi
 
-  source "${ZPLUG_HOME}/init.zsh"
+   source "${ZPLUG_HOME}/init.zsh"
 
-  if [[ ! -e $zplug_loadfile ]]; then
-    zplug 'rxrc/zshrc'
-    zplug install
-    export ZPLUG_LOADFILE=$zplug_loadfile
-    source "${ZPLUG_HOME}/init.zsh"
-  fi
+   if [[ ! -e $zplug_loadfile ]]; then
+     zplug 'rxrc/zshrc'
+     zplug install
+     export ZPLUG_LOADFILE=$zplug_loadfile
+     source "${ZPLUG_HOME}/init.zsh"
+   fi
 
-  zplug 'rxrc/zshrc', use:env.zsh
-  zplug 'rxrc/zshrc', use:plugin
+   zplug 'rxrc/zshrc', use:env.zsh
+   zplug 'rxrc/zshrc', use:plugin
 
-  if ! zplug check; then
-    zplug install
-    echo '[zplug] Updating cache file: this may take up to a minute'
-  fi
+   if ! zplug check; then
+     zplug install
+     echo '[zplug] Updating cache file: this may take up to a minute'
+   fi
 
-  zplug load
-  ```
+   zplug load
+   ```
 
 3. Open a new terminal session and wait for the initial install to complete.
 
