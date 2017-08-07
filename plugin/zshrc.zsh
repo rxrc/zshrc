@@ -4,7 +4,7 @@ if [[ ! -d $(dirname $HISTFILE) ]]; then
 fi
 
 # Update zshrc.
-function zshupg () {
+zshupg () {
   zplug update
   zplug install
   zplug clean
