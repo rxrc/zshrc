@@ -11,8 +11,3 @@ export XDG_DATA_DIRS=${XDG_DATA_DIRS:-/usr/local/share/:/usr/share/}
 
 # Set Zsh history file.
 export HISTFILE=${HISTFILE:-$XDG_CACHE_HOME/zsh/history}
-
-# Create Zsh history file directory.
-if [[ ! -d $(dirname $HISTFILE) ]]; then
-  mkdir -p $(dirname $HISTFILE)
-fi
