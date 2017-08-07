@@ -43,3 +43,7 @@ fi
 
 # Set kitchen-sync transfer mode.
 export KITCHEN_SYNC_MODE=rsync
+
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
+export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
+export NPM_CONFIG_TMP=$XDG_RUNTIME_DIR/npm
