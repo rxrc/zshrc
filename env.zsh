@@ -16,8 +16,3 @@ export HISTFILE=${HISTFILE:-$XDG_CACHE_HOME/zsh/history}
 if [[ ! -d $(dirname $HISTFILE) ]]; then
   mkdir -p $(dirname $HISTFILE)
 fi
-
-# Add local binaries to path.
-if [[ -d $HOME/.local/bin ]]; then
-  PATH=$HOME/.local/bin:$PATH
-fi
