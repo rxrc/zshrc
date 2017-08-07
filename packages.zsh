@@ -6,11 +6,11 @@ if [[ -f "${ZDOTDIR}/env.zsh" ]]; then
   source "${ZDOTDIR}/env.zsh"
 fi
 
-# Set Base16 theme.
+# Set Base16 theme and type.
+export BASE16_THEME=${BASE16_THEME:-tomorrow}
+export BASE16_TYPE=${BASE16_TYPE:-night}
+base16_script="base16-${BASE16_THEME}-${BASE16_TYPE}.sh"
 base16_repo='chriskempson/base16-shell'
-base16_theme=${BASE16_THEME:-tomorrow}
-base16_type=${BASE16_TYPE:-night}
-base16_script="base16-${base16_theme}-${base16_type}.sh"
 
 # Ignore Base16 type if unsupported by theme.
 if [[ ! -f "${ZPLUG_REPOS}/${base16_repo}/scripts/${base16_script}" ]]; then

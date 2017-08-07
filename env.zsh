@@ -12,33 +12,20 @@ export XDG_DATA_DIRS=${XDG_DATA_DIRS:-/usr/local/share/:/usr/share/}
 # Set Zsh history file.
 export HISTFILE=${HISTFILE:-$XDG_CACHE_HOME/zsh/history}
 
-# Set ssh-agent socket.
-if [[ -S $XDG_RUNTIME_DIR/ssh-agent.socket ]]; then
-  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
-fi
-
 # Set editor.
 export EDITOR='nvim'
 
-# Set (Neo)Vim color scheme.
-if [[ -z $VIM_COLOR ]]; then
-  export VIM_COLOR=base16-$BASE16_THEME
+# Set ssh-agent socket.
+if [[ -z "$SSH_AUTH_SOCK" && -S $XDG_RUNTIME_DIR/ssh-agent.socket ]]; then
+  export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 fi
 
-# Set (Neo)Vim background.
-if [[ -z $VIM_BACKGROUND ]]; then
-  export VIM_BACKGROUND=$BASE16_TYPE
+# Set npm paths.
+export NPM_CONFIG_USERCONFIG=${NPM_CONFIG_USERCONFIG:-$XDG_CONFIG_HOME/npm/config}
+export NPM_CONFIG_CACHE=${NPM_CONFIG_CACHE:-$XDG_CACHE_HOME/npm}
+export NPM_CONFIG_TMP=${NPM_CONFIG_TMP:-$XDG_RUNTIME_DIR/npm}
+
+# Set Go path.
+if [[ -d $HOME/go ]]; then
+  export GOPATH=${GOPATH:-$HOME/go}
 fi
-
-# Set fzf default command.
-if [[ -x $(command -v fzf) && \
-      -x $(command -v ag) ]]; then
-  export FZF_DEFAULT_COMMAND='(ag -g "")'
-fi
-
-# Set kitchen-sync transfer mode.
-export KITCHEN_SYNC_MODE=rsync
-
-export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/config
-export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
-export NPM_CONFIG_TMP=$XDG_RUNTIME_DIR/npm

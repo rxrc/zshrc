@@ -7,8 +7,8 @@ paths=(
   # Local binaries
   $HOME/.local/bin
 
-  # npm binaries
-  $HOME/.npm/bin
+  # Go binaries
+  $GOPATH/bin
 )
 
 # Add paths to PATH.
@@ -17,13 +17,3 @@ for p in $paths; do
     export PATH=$PATH:$p
   fi
 done
-
-# Set Go path.
-if [[ -d $HOME/go ]]; then
-  export GOPATH="$HOME/go"
-fi
-
-# Add Go binaries to path.
-if [[ ! -z "$GOPATH" && -d $GOPATH/bin ]]; then
-  export PATH=$GOPATH/bin:$PATH
-fi
