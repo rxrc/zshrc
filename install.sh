@@ -1,4 +1,4 @@
-#!/bin/env sh
+#!/usr/bin/env sh
 
 main () {
   set -e
@@ -102,6 +102,7 @@ install_zshrc () {
 
   tee $zdotdir/.zshrc >/dev/null <<EOF
 # $repo
+export ZSHRC_REPO=$repo
 
 export ZDOTDIR="\${ZDOTDIR:-\${XDG_CONFIG_HOME:-\$HOME/.config}/zsh}"
 export ZPLUG_HOME="\${ZPLUG_HOME:-\${XDG_CONFIG_HOME:-\$HOME/.config}/zplug}"
@@ -116,14 +117,13 @@ fi
 source "\${ZPLUG_HOME}/init.zsh"
 
 if [[ ! -e \$zplug_loadfile ]]; then
-  zplug '$repo'
+  zplug \${ZSHRC_REPO}
   zplug install
   export ZPLUG_LOADFILE=\$zplug_loadfile
   source "\${ZPLUG_HOME}/init.zsh"
 fi
 
-zplug '$repo', use:env.zsh
-zplug '$repo', use:plugin
+zplug \${ZSHRC_REPO}, use:env.zsh
 
 if ! zplug check; then
   zplug install
@@ -144,8 +144,8 @@ dev_mode () {
   f_str[0]="zplug_loadfile=\"\${ZPLUG_HOME}/repos/${repo}/packages.zsh\""
   r_str[0]="zplug_loadfile=\"$(pwd)/packages.zsh\""
 
-  f_str[1]="zplug '${repo}'"
-  r_str[1]="zplug '$(pwd)', from:local, at:${1:-master}"
+  f_str[1]="ZSHRC_REPO=${repo}"
+  r_str[1]="ZSHRC_REPO=\"$(pwd), from:local, at:${1:-master}\""
 
   echo -e "\033[32m➤ Entering development mode!   \033[0m"
 

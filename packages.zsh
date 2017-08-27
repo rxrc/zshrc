@@ -117,3 +117,5 @@ done
 for plugin in $oh_my_zsh_plugins; do
   zplug "plugins/$plugin", from:oh-my-zsh, defer:1
 done
+
+zplug ${ZSHRC_REPO}, defer:2, use:plugin

@@ -55,6 +55,7 @@ $ wget https://git.io/vH987 -O - | sh
 
    ```zsh
    # rxrc/zshrc
+   export ZSHRC_REPO=rxrc/zshrc
 
    export ZDOTDIR="${ZDOTDIR:-${XDG_CONFIG_HOME:-$HOME/.config}/zsh}"
    export ZPLUG_HOME="${ZPLUG_HOME:-${XDG_CONFIG_HOME:-$HOME/.config}/zplug}"
@@ -69,14 +70,13 @@ $ wget https://git.io/vH987 -O - | sh
    source "${ZPLUG_HOME}/init.zsh"
 
    if [[ ! -e $zplug_loadfile ]]; then
-     zplug 'rxrc/zshrc'
+     zplug ${ZSHRC_REPO}
      zplug install
      export ZPLUG_LOADFILE=$zplug_loadfile
      source "${ZPLUG_HOME}/init.zsh"
    fi
 
-   zplug 'rxrc/zshrc', use:env.zsh
-   zplug 'rxrc/zshrc', use:plugin
+   zplug ${ZSHRC_REPO}, use:env.zsh
 
    if ! zplug check; then
      zplug install
