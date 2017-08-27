@@ -27,32 +27,85 @@ zplug $ZDOTDIR, from:local, defer:1, use:promptline.zsh, \
 # Oh-My-Zsh libs to load.
 oh_my_zsh_libs=(
   clipboard
+  compfix
+  completion
+  diagnostics
   directories
+  functions
+  git
+  grep
   history
+  key-bindings
+  misc
+  nvm
+  prompt_info_functions
+  spectrum
+  termsupport
+  theme-and-appearance
 )
 
 # Oh-My-Zsh plugins to load.
-oh_my_zsh_plugins=(
-  bundler
+oh_my_zsh_plugins=()
+
+## Core
+oh_my_zsh_plugins+=(
+  archlinux
+  autojump
+  colored-man-pages
+  colorize
   cp
+  dotenv
+  emoji
+  encode64
   extract
-  gem
-  git
-  github
-  golang
+  git # TODO: More git plugins?
+  rsync
+  systemd
+  tmux
+  tmuxinator
+  vi-mode
+  # TOTO: safe-paste ?
+)
+
+## Developer tools
+oh_my_zsh_plugins+=(
+  aws
+  docker-compose # TODO: use official?
+  gulp
   heroku
   httpie
+  kubectl
+  terraform
+  # TODO: lol ?
+)
+
+## Clojure
+oh_my_zsh_plugins+=(
   lein
+)
+
+## Node
+oh_my_zsh_plugins+=(
+  npm
   nvm
-  python
+  yarn
+)
+
+## Python
+oh_my_zsh_plugins+=(
+  pep8
   pip
+  pylint
+  python
+)
+
+## Ruby
+oh_my_zsh_plugins+=(
+  bundler
+  gem
   rake
   rbenv
-  rsync
   ruby
-  vagrant
-  vi-mode
-  vim-interaction
 )
 
 # Load Oh-My-Zsh libs.
