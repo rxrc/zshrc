@@ -4,11 +4,11 @@ paths=(
   /opt/android-sdk/tools
   /opt/android-sdk/platform-tools
 
-  # Local binaries
-  $HOME/.local/bin
-
   # Go binaries
   $GOPATH/bin
+
+  # Local binaries
+  $HOME/.local/bin
 )
 
 # Add paths to PATH.

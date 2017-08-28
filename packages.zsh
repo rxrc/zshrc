@@ -122,3 +122,6 @@ for plugin in $oh_my_zsh_plugins; do
 done
 
 zplug ${ZSHRC_REPO}, defer:2, use:plugin
+zplug ${ZSHRC_REPO}, defer:2, use:plugin/interfaces
+zplug ${ZSHRC_REPO}, defer:2, use:plugin/aliases
+zplug ${ZSHRC_REPO}, defer:2, use:plugin/bindings
