@@ -24,7 +24,10 @@ zplug "${base16_repo}", defer:1, use:"scripts/${base16_script}"
 zplug $ZDOTDIR, from:local, defer:1, use:promptline.zsh, \
   if:"[ -f "${ZDOTDIR}/promptline.zsh" ]"
 
+# Load syntax highlighing.
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+# Load substring history search.
 zplug 'zsh-users/zsh-history-substring-search', defer:3
 
 # Oh-My-Zsh libs to load.
