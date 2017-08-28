@@ -34,6 +34,13 @@ zplug 'zsh-users/zsh-history-substring-search', defer:3
 zplug '/usr/share/fzf', from:local, defer:1, use:fzf.zsh, \
   if:'[ -f /usr/share/fzf/fzf.zsh ]'
 
+# Load mlabs plugin.
+# TODO: Loading from private git repos unsupported.
+# zplug 'meltwater/mlabsh' from:git, defer:2, use:team, \
+  # if:"[ -e "${HOME}/meltwater" ]"
+zplug "${HOME}/meltwater/mlabsh", from:local, defer:2, use:'team/*.sh', \
+  if:"[ -e "${HOME}/meltwater/mlabsh" ]"
+
 # Oh-My-Zsh libs to load.
 oh_my_zsh_libs=(
   clipboard
