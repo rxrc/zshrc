@@ -30,6 +30,10 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 # Load substring history search.
 zplug 'zsh-users/zsh-history-substring-search', defer:3
 
+# Load fzf plugin.
+zplug '/usr/share/fzf/fzf.zsh', from:local, defer:1 \
+  if:"[ -f /usr/share/fzf/fzf.zsh ]"
+
 # Oh-My-Zsh libs to load.
 oh_my_zsh_libs=(
   clipboard
