@@ -25,7 +25,7 @@ zplug $ZDOTDIR, from:local, defer:1, use:promptline.zsh, \
   if:"[ -f "${ZDOTDIR}/promptline.zsh" ]"
 
 # Load syntax highlighing.
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 
 # Load substring history search.
 zplug 'zsh-users/zsh-history-substring-search', defer:3
