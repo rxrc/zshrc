@@ -38,13 +38,13 @@ to either `/etc/zsh/zshenv` or `~/.zshenv`.
 You can install this via the command-line with either curl
 
 ```
-$ curl -L https://git.io/vH987 | sh
+$ curl -L https://git.io/v5XSs | sh
 ```
 
 or wget
 
 ```
-$ wget https://git.io/vH987 -O - | sh
+$ wget https://git.io/v5XSs -O - | sh
 ```
 
 ### Manual Install
