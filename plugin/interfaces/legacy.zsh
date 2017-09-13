@@ -179,3 +179,12 @@ mx () {
     tmux attach -t $1 || tmux new-session -s $1
   fi
 }
+
+gitsed () {
+  if ! [[ -n "$1" ]]; then
+    echo 'Must specify sed command.'
+    return 1
+  fi
+
+  git ls-files -z | xargs -0 sed -i $1
+}
