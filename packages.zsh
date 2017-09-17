@@ -54,7 +54,6 @@ oh_my_zsh_libs=(
   history
   key-bindings
   misc
-  nvm
   prompt_info_functions
   spectrum
   termsupport
@@ -104,7 +103,6 @@ oh_my_zsh_plugins+=(
 ## Node
 oh_my_zsh_plugins+=(
   npm
-  nvm
   yarn
 )
 
