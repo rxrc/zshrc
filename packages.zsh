@@ -31,8 +31,9 @@ zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 zplug 'zsh-users/zsh-history-substring-search', defer:3
 
 # Load fzf plugin.
-zplug '/usr/share/fzf', from:local, defer:1, use:fzf.zsh, \
-  if:'[ -f /usr/share/fzf/fzf.zsh ]'
+export FZF_SHARE_PATH=${FZF_SHARE_PATH:-/usr/share/fzf}
+zplug $FZF_SHARE_PATH, from:local, defer:1, use:fzf.zsh, \
+  if:"[ -f "$FZF_SHARE_PATH/fzf.zsh" ]"
 
 # Load mlabs plugin.
 # TODO: Loading from private git repos unsupported.
