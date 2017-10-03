@@ -21,7 +21,7 @@ fi
 zplug "${base16_repo}", defer:1, use:"scripts/${base16_script}"
 
 # Load promptline.
-zplug $ZDOTDIR, from:local, defer:1, use:promptline.zsh, \
+zplug "${ZDOTDIR}", from:local, defer:1, use:promptline.zsh, \
   if:"[ -f "${ZDOTDIR}/promptline.zsh" ]"
 
 # Load syntax highlighing.
@@ -32,7 +32,7 @@ zplug 'zsh-users/zsh-history-substring-search', defer:3
 
 # Load fzf plugin.
 export FZF_SHARE_PATH=${FZF_SHARE_PATH:-/usr/share/fzf}
-zplug $FZF_SHARE_PATH, from:local, defer:1, use:fzf.zsh, \
+zplug "${FZF_SHARE_PATH}", from:local, defer:1, use:fzf.zsh, \
   if:"[ -f "$FZF_SHARE_PATH/fzf.zsh" ]"
 
 # Load mlabs plugin.
@@ -125,23 +125,23 @@ oh_my_zsh_plugins+=(
 
 # Load Oh-My-Zsh libs.
 for lib in $oh_my_zsh_libs; do
-  zplug "lib/$lib", from:oh-my-zsh, defer:1
+  zplug "lib/${lib}", from:oh-my-zsh, defer:1
 done
 
 # Load Oh-My-Zsh plugins.
 for plugin in $oh_my_zsh_plugins; do
-  zplug "plugins/$plugin", from:oh-my-zsh, defer:1
+  zplug "plugins/${plugin}", from:oh-my-zsh, defer:1
 done
 
 
 # Only load tmux plugins when tmux is installed.
 oh_my_zsh_tmux_plugins=(tmux tmuxinator)
 for plugin in $oh_my_zsh_tmux_plugins; do
-  zplug "plugins/$plugin", from:oh-my-zsh, defer:1, \
+  zplug "plugins/${plugin}", from:oh-my-zsh, defer:1, \
     if:'[ -x $(command -v tmux) ]'
 done
 
-zplug ${ZSHRC_REPO}, defer:2, use:plugin
-zplug ${ZSHRC_REPO}, defer:2, use:plugin/interfaces
-zplug ${ZSHRC_REPO}, defer:2, use:plugin/aliases
-zplug ${ZSHRC_REPO}, defer:2, use:plugin/bindings
+zplug "${ZSHRC_REPO}", defer:2, use:plugin
+zplug "${ZSHRC_REPO}", defer:2, use:plugin/interfaces
+zplug "${ZSHRC_REPO}", defer:2, use:plugin/aliases
+zplug "${ZSHRC_REPO}", defer:2, use:plugin/bindings
