@@ -77,8 +77,6 @@ oh_my_zsh_plugins+=(
   git # TODO: More git plugins?
   rsync
   systemd
-  tmux
-  tmuxinator
   vi-mode
   # TOTO: safe-paste ?
 )
@@ -132,6 +130,14 @@ done
 # Load Oh-My-Zsh plugins.
 for plugin in $oh_my_zsh_plugins; do
   zplug "plugins/$plugin", from:oh-my-zsh, defer:1
+done
+
+
+# Only load tmux plugins when tmux is installed.
+oh_my_zsh_tmux_plugins=(tmux tmuxinator)
+for plugin in $oh_my_zsh_tmux_plugins; do
+  zplug "plugins/$plugin", from:oh-my-zsh, defer:1, \
+    if:'[ -x $(command -v tmux) ]'
 done
 
 zplug ${ZSHRC_REPO}, defer:2, use:plugin
