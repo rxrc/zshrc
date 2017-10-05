@@ -14,7 +14,7 @@ base16_repo='chriskempson/base16-shell'
 
 # Ignore Base16 type if unsupported by theme.
 if [[ ! -f "${ZPLUG_REPOS}/${base16_repo}/scripts/${base16_script}" ]]; then
-  base16_script="base16-${base16_theme}.sh"
+  base16_script="base16-${BASE16_THEME}.sh"
 fi
 
 # Load Base16 theme.
