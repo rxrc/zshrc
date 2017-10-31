@@ -150,17 +150,6 @@ vimupg () {
   vim -c PlugClean! -c qall
 }
 
-# Upgrade zshrc.
-zshupg () {
-  if ! [[ -d $HOME/.zgen.zsh ]]; then
-    echo 'zgen is not installed.'
-    exit 1
-  fi
-
-  zgen selfupdate
-  zgen update
-}
-
 # Add Git specific aliases.
 if [[ -x $(command -v git) ]]; then
   alias gfup='git fetch --no-tags upstream'
