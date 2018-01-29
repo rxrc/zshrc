@@ -3,7 +3,8 @@
 [[ -x $(command -v nvim) ]] && alias vim='nvim'
 
 # Additional vim aliases.
-[[ -x $(command -v nvim-qt) ]] && alias vv='nv'
+[[ -x $(command -v nvim-qt) ]] && alias vv='nvq'
+[[ -x $(command -v nvim-gtk) ]] && alias vv='nvg'
 
 # ack is ack-grep on some systems.
 [[ -x $(command -v ack-grep) ]] && alias ack='ack-grep'
@@ -78,13 +79,23 @@ tarz () {
 }
 
 # Open neovim-qt and hide output.
-nv () {
+nvq () {
   if ! [[ -x $(command -v nvim-qt ) ]]; then
     echo 'neovim-qt is not installed.'
     exit 1
   fi
 
-  NVIM_TUI_ENABLE_TRUE_COLOR=1 nohup nvim-qt $1 &>/dev/null &
+  nohup nvim-qt $1 &>/dev/null &
+}
+
+# Open neovim-gtk and hide output.
+nvg () {
+  if ! [[ -x $(command -v nvim-gtk ) ]]; then
+    echo 'neovim-gtk is not installed.'
+    exit 1
+  fi
+
+  nohup nvim-gtk $1 &>/dev/null &
 }
 
 # Upgrade tmuxrc.
