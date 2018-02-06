@@ -12,8 +12,9 @@ export XDG_DATA_DIRS=${XDG_DATA_DIRS:-/usr/local/share/:/usr/share/}
 # Set Zsh history file.
 export HISTFILE=${HISTFILE:-$XDG_CACHE_HOME/zsh/history}
 
-# Set GnuPG home.
+# Set GnuPG home and gpg tty.
 export GNUPGHOME="${XDG_CONFIG_HOME}/gnupg"
+export GPG_TTY=$(tty)
 
 # Set editor.
 export EDITOR='nvim'
