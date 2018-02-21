@@ -29,6 +29,15 @@ export NPM_CONFIG_USERCONFIG=${NPM_CONFIG_USERCONFIG:-$XDG_CONFIG_HOME/npm/confi
 export NPM_CONFIG_CACHE=${NPM_CONFIG_CACHE:-$XDG_CACHE_HOME/npm}
 export NPM_CONFIG_TMP=${NPM_CONFIG_TMP:-$XDG_RUNTIME_DIR/npm}
 
+# Set nvm path.
+export NVM_DIR=${NVM_DIR:-$XDG_DATA_HOME/nvm}
+
+# Set pyenv path.
+export PYENV_ROOT=${PYENV_ROOT:-$XDG_DATA_HOME/pyenv}
+
+# Set rbenv path.
+export RBENV_ROOT=${RBENV_ROOT:-$XDG_DATA_HOME/rbenv}
+
 # Set Go path.
 if [[ -d $HOME/go ]]; then
   export GOPATH=${GOPATH:-$HOME/go}
