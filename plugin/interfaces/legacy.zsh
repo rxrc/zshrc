@@ -190,5 +190,5 @@ gitsed () {
 }
 
 # Load nvm
-alias load_nvm='export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
+alias load_nvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
 alias nvm='unalias nvm && load_nvm && nvm'
