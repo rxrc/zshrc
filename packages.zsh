@@ -101,6 +101,7 @@ oh_my_zsh_plugins+=(
 
 ## Node
 oh_my_zsh_plugins+=(
+  # nvm # too slow
   npm
   yarn
 )
@@ -109,7 +110,7 @@ oh_my_zsh_plugins+=(
 oh_my_zsh_plugins+=(
   pep8
   pip
-  pyenv
+  # pyenv
   pylint
   python
 )
@@ -119,7 +120,7 @@ oh_my_zsh_plugins+=(
   bundler
   gem
   rake
-  rbenv
+  # rbenv
   ruby
 )
 
@@ -133,13 +134,16 @@ for plugin in $oh_my_zsh_plugins; do
   zplug "plugins/${plugin}", from:oh-my-zsh, defer:1
 done
 
-
 # Only load tmux plugins when tmux is installed.
 oh_my_zsh_tmux_plugins=(tmux tmuxinator)
 for plugin in $oh_my_zsh_tmux_plugins; do
   zplug "plugins/${plugin}", from:oh-my-zsh, defer:1, \
     if:'[ -x $(command -v tmux) ]'
 done
+
+# Load forked Oh-My-Zsh plugins.
+zplug "plugins/rbenv", from:rxfork/oh-my-zsh, defer:1, at:respect-env-paths
+zplug "plugins/pyenv", from:rxfork/oh-my-zsh, defer:1, at:respect-env-paths
 
 zplug "${ZSHRC_REPO}", defer:2, use:plugin
 zplug "${ZSHRC_REPO}", defer:2, use:plugin/interfaces
