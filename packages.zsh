@@ -24,6 +24,10 @@ zplug "${base16_repo}", defer:1, use:"scripts/${base16_script}"
 zplug "${ZDOTDIR}", from:local, defer:1, use:promptline.zsh, \
   if:"[ -f "${ZDOTDIR}/promptline.zsh" ]"
 
+# Load autosuggest.
+export ZSH_AUTOSUGGEST_USE_ASYNC=true
+zplug 'zsh-users/zsh-autosuggestions', defer:1
+
 # Load syntax highlighing.
 zplug 'zsh-users/zsh-syntax-highlighting', defer:2
 
