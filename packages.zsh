@@ -20,9 +20,21 @@ fi
 # Load Base16 theme.
 zplug "${base16_repo}", defer:1, use:"scripts/${base16_script}"
 
+# Set ZSH theme.
+export ZSH_THEME=${ZSH_THEME:-pure}
+
 # Load promptline.
 zplug "${ZDOTDIR}", from:local, defer:1, use:promptline.zsh, \
-  if:"[ -f "${ZDOTDIR}/promptline.zsh" ]"
+  if:"[ "$ZSH_THEME" = 'promptline' -a -f "${ZDOTDIR}/promptline.zsh" ]"
+
+# Load pure.
+zplug 'mafredri/zsh-async', defer:1, \
+  if:"[ $ZSH_THEME = 'pure' ]"
+zplug 'sindresorhus/pure', use:pure.zsh, as:theme, defer:1, \
+  if:"[ $ZSH_THEME = 'pure' ]"
+
+# Load spaceship.
+zplug 'denysdovhan/spaceship-prompt', defer:1, as:theme, use:spaceship.zsh
 
 # Load autosuggest.
 export ZSH_AUTOSUGGEST_USE_ASYNC=true
@@ -37,7 +49,7 @@ zplug 'zsh-users/zsh-history-substring-search', defer:3
 # Load fzf plugin.
 export FZF_SHARE_PATH=${FZF_SHARE_PATH:-/usr/share/fzf}
 zplug "${FZF_SHARE_PATH}", from:local, defer:1, use:fzf.zsh, \
-  if:"[ -f "$FZF_SHARE_PATH/fzf.zsh" ]"
+  if:"[ -f "${FZF_SHARE_PATH}/fzf.zsh" ]"
 
 # Load mlabs plugin.
 # TODO: Loading from private git repos unsupported.
