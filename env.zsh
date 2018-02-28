@@ -42,7 +42,7 @@ export PYENV_ROOT=${PYENV_ROOT:-$XDG_DATA_HOME/pyenv}
 export RBENV_ROOT=${RBENV_ROOT:-$XDG_DATA_HOME/rbenv}
 
 # Set HTTPie path.
-export HTTPIE_CONFIG_DIR="${XDG_CONFIG_HOME}/httpie"
+export HTTPIE_CONFIG_DIR="${HTTPIE_CONFIG_DIR:-$XDG_CONFIG_HOME/httpie}"
 
 # Set Go path.
 if [[ -d $HOME/go ]]; then
