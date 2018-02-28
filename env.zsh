@@ -41,6 +41,9 @@ export PYENV_ROOT=${PYENV_ROOT:-$XDG_DATA_HOME/pyenv}
 # Set rbenv path.
 export RBENV_ROOT=${RBENV_ROOT:-$XDG_DATA_HOME/rbenv}
 
+# Set Bundler path.
+export BUNDLE_USER_HOME="${BUNDLE_USER_HOME:-$XDG_CONFIG_HOME/bundle}"
+
 # Set HTTPie path.
 export HTTPIE_CONFIG_DIR="${HTTPIE_CONFIG_DIR:-$XDG_CONFIG_HOME/httpie}"
 
