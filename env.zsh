@@ -19,6 +19,9 @@ export GPG_TTY=$(tty)
 # Set editor.
 export EDITOR='nvim'
 
+# Set ignore file.
+export IGNORE_FILE=${IGNORE_FILE:-$XDG_CONFIG_HOME/ignore}
+
 # Set ssh-agent socket.
 if [[ -z "$SSH_AUTH_SOCK" && -S $XDG_RUNTIME_DIR/ssh-agent.socket ]]; then
   export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"

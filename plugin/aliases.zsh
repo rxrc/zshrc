@@ -1,2 +1,2 @@
-alias ag="ag --hidden --path-to-ignore ${XDG_CONFIG_HOME}/ignore"
-alias rg="rg --hidden --smart-case --ignore-file ${XDG_CONFIG_HOME}/ignore"
+alias ag="ag --hidden --path-to-ignore ${IGNORE_FILE}/ignore"
+alias rg="rg --hidden --smart-case --ignore-file ${IGNORE_FILE}/ignore"
