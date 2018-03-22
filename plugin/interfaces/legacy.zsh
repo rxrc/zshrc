@@ -3,8 +3,8 @@
 [[ -x $(command -v nvim) ]] && alias vim='nvim'
 
 # Additional vim aliases.
-[[ -x $(command -v nvim-qt) ]] && alias vv='nvq'
 [[ -x $(command -v nvim-gtk) ]] && alias vv='nvg'
+[[ -x $(command -v nvim-qt) ]] && alias vv='nvq'
 
 # ack is ack-grep on some systems.
 [[ -x $(command -v ack-grep) ]] && alias ack='ack-grep'
@@ -85,7 +85,7 @@ nvq () {
     exit 1
   fi
 
-  nohup nvim-qt $1 &>/dev/null &
+  nohup nvim-qt --no-ext-tabline $1 &>/dev/null &
 }
 
 # Open neovim-gtk and hide output.
