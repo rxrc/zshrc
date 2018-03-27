@@ -68,6 +68,9 @@ export KUBECONFIG=${KUBECONFIG:-$XDG_CONFIG_HOME/kube/config}
 # Set Minikube path.
 export MINIKUBE_HOME=${MINIKUBE_HOME:-$XDG_CACHE_HOME/minikube}
 
+# Set Helm path.
+export HELM_HOME=${HELM_HOME:-$XDG_CONFIG_HOME/helm}
+
 # Set Go path.
 if [[ -d $HOME/go ]]; then
   export GOPATH=${GOPATH:-$HOME/go}
