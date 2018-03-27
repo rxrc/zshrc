@@ -35,6 +35,9 @@ export NPM_CONFIG_TMP=${NPM_CONFIG_TMP:-$XDG_RUNTIME_DIR/npm}
 # Set Yarn paths.
 export YARN_CACHE_FOLDER=${YARN_CACHE_FOLDER:-$XDG_CACHE_HOME/yarn}
 
+# Set Node.js paths.
+export NODE_REPL_HISTORY=${NODE_REPL_HISTORY:-$XDG_CACHE_HOME/node/repl_history}
+
 # Set nvm path.
 export NVM_DIR=${NVM_DIR:-$XDG_DATA_HOME/nvm}
 
