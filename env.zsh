@@ -42,7 +42,7 @@ export NODE_REPL_HISTORY=${NODE_REPL_HISTORY:-$XDG_CACHE_HOME/node/repl_history}
 export NVM_DIR=${NVM_DIR:-$XDG_DATA_HOME/nvm}
 
 # Set Babel path.
-export BABEL_CACHE_PATH=${BABEL_CACHE_PATH:-$XDG_CACHE_HOME/babel.json}
+export BABEL_CACHE_PATH=${BABEL_CACHE_PATH:-$XDG_CACHE_HOME/babel/cache.json}
 
 # Set pyenv path.
 export PYENV_ROOT=${PYENV_ROOT:-$XDG_DATA_HOME/pyenv}
