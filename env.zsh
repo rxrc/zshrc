@@ -38,8 +38,7 @@ export YARN_CACHE_FOLDER=${YARN_CACHE_FOLDER:-$XDG_CACHE_HOME/yarn}
 # Set nvm path.
 export NVM_DIR=${NVM_DIR:-$XDG_DATA_HOME/nvm}
 
-
-# Set Babel cache path.
+# Set Babel path.
 export BABEL_CACHE_PATH=${BABEL_CACHE_PATH:-$XDG_CACHE_HOME/babel.json}
 
 # Set pyenv path.
@@ -53,6 +52,9 @@ export BUNDLE_USER_HOME="${BUNDLE_USER_HOME:-$XDG_CONFIG_HOME/bundle}"
 
 # Set HTTPie path.
 export HTTPIE_CONFIG_DIR="${HTTPIE_CONFIG_DIR:-$XDG_CONFIG_HOME/httpie}"
+
+# Set Vagrant path.
+export VAGRANT_HOME=${VAGRANT_HOME:-$XDG_DATA_DIR/vagrant}
 
 # Set Go path.
 if [[ -d $HOME/go ]]; then
