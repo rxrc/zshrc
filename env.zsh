@@ -38,6 +38,10 @@ export YARN_CACHE_FOLDER=${YARN_CACHE_FOLDER:-$XDG_CACHE_HOME/yarn}
 # Set nvm path.
 export NVM_DIR=${NVM_DIR:-$XDG_DATA_HOME/nvm}
 
+
+# Set Babel cache path.
+export BABEL_CACHE_PATH=${BABEL_CACHE_PATH:-$XDG_CACHE_HOME/babel.json}
+
 # Set pyenv path.
 export PYENV_ROOT=${PYENV_ROOT:-$XDG_DATA_HOME/pyenv}
 
