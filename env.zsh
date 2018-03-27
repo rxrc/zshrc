@@ -62,6 +62,9 @@ export VAGRANT_HOME=${VAGRANT_HOME:-$XDG_DATA_DIR/vagrant}
 # Set Gradle path
 export GRADLE_USER_HOME=${GRADLE_USER_HOME:-$XDG_CACHE_HOME/gradle}
 
+# Set Kubernetes kubeconfig config path.
+export KUBECONFIG=${KUBECONFIG:-$XDG_CONFIG_HOME/kube/config}
+
 # Set Go path.
 if [[ -d $HOME/go ]]; then
   export GOPATH=${GOPATH:-$HOME/go}
