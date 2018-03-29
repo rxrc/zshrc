@@ -9,8 +9,11 @@ export XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
 export XDG_CONFIG_DIRS=${XDG_CONFIG_DIRS:-/etc/xdg}
 export XDG_DATA_DIRS=${XDG_DATA_DIRS:-/usr/local/share/:/usr/share/}
 
-# Set Zsh history file.
+# Set Zsh history variables.
 export HISTFILE=${HISTFILE:-$XDG_CACHE_HOME/zsh/history}
+export HISTDUP=erase
+export HISTSIZE=10000
+export SAVEHIST=$HISTSIZE
 
 # Set GnuPG home and gpg tty.
 export GNUPGHOME="${XDG_CONFIG_HOME}/gnupg"
