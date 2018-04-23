@@ -127,7 +127,7 @@ oh_my_zsh_plugins+=(
 oh_my_zsh_plugins+=(
   pep8
   pip
-  # pyenv
+  pyenv
   pylint
   python
 )
