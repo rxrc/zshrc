@@ -127,7 +127,7 @@ oh_my_zsh_plugins+=(
 oh_my_zsh_plugins+=(
   pep8
   pip
-  pyenv
+  # pyenv
   pylint
   python
 )
@@ -160,6 +160,7 @@ done
 
 # Load forked Oh-My-Zsh plugins.
 zplug 'rxfork/oh-my-zsh', use:'plugins/rbenv', defer:1, at:respect-env-paths
+zplug 'rxfork/oh-my-zsh', use:'plugins/pyenv', defer:1, at:respect-env-paths
 
 zplug "${ZSHRC_REPO}", defer:2, use:plugin
 zplug "${ZSHRC_REPO}", defer:2, use:plugin/interfaces
