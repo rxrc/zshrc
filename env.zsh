@@ -74,6 +74,11 @@ export MINIKUBE_HOME=${MINIKUBE_HOME:-$XDG_CACHE_HOME/minikube}
 # Set Helm path.
 export HELM_HOME=${HELM_HOME:-$XDG_CONFIG_HOME/helm}
 
+# Set AWS paths.
+export AWS_HOME=${AWS_HOME:-$XDG_CONFIG_HOME/aws}
+export AWS_SHARED_CREDENTIALS_FILE=${AWS_SHARED_CREDENTIALS_FILE:-$AWS_HOME/credentials}
+export AWS_CONFIG_FILE=${AWS_CONFIG_FILE:-$AWS_HOME/config}
+
 # Set Go path.
 if [[ -d $HOME/go ]]; then
   export GOPATH=${GOPATH:-$HOME/go}
