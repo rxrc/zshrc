@@ -189,6 +189,11 @@ gitsed () {
   git ls-files -z | xargs -0 sed -i $1
 }
 
+kctx () {
+  export TILLER_NAMESPACE=$1
+  kubectx $1
+}
+
 # Load nvm
 alias load_nvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
 alias nvm='unalias nvm && load_nvm && nvm'
