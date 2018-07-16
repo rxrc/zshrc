@@ -190,8 +190,8 @@ gitsed () {
 }
 
 kctx () {
-  export TILLER_NAMESPACE=$1
-  kubectx $1
+  [[ -z "$1" ]] || export TILLER_NAMESPACE="$1"
+  kubectx "$@"
 }
 
 # Load nvm
