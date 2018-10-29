@@ -24,8 +24,8 @@ zplug "${base16_repo}", defer:1, use:"scripts/${base16_script}"
 export ZSH_THEME=${ZSH_THEME:-pure}
 
 # Load promptline.
-zplug "${ZDOTDIR}", from:local, defer:1, use:promptline.zsh, \
-  if:"[ "$ZSH_THEME" = 'promptline' -a -f "${ZDOTDIR}/promptline.zsh" ]"
+# zplug "${ZDOTDIR}", from:local, defer:1, use:promptline.zsh, \
+#   if:"[ "$ZSH_THEME" = 'promptline' -a -f "${ZDOTDIR}/promptline.zsh" ]"
 
 # Load pure.
 zplug 'mafredri/zsh-async', defer:1, \
@@ -33,8 +33,8 @@ zplug 'mafredri/zsh-async', defer:1, \
 zplug 'sindresorhus/pure', use:pure.zsh, defer:2, \
   if:"[ $ZSH_THEME = 'pure' ]"
 
-# Load spaceship.
-zplug 'denysdovhan/spaceship-prompt', defer:1, use:spaceship.zsh
+# # Load spaceship.
+# zplug 'denysdovhan/spaceship-prompt', defer:1, use:spaceship.zsh
 
 # Load autosuggest.
 export ZSH_AUTOSUGGEST_USE_ASYNC=true
