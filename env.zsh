@@ -86,3 +86,6 @@ fi
 
 # Set R cargo path.
 export CARGO_HOME=${CARGO_HOME:-$XDG_CACHE_HOME/cargo}
+
+# Set The Haskell Tool Stack path.
+export STACK_ROOT=${STACK_ROOT:-$XDG_CONFIG_HOME/stack}
