@@ -116,6 +116,11 @@ oh_my_zsh_plugins+=(
   lein
 )
 
+## Haskell
+oh_my_zsh_plugins+=(
+  stack
+)
+
 ## Node
 oh_my_zsh_plugins+=(
   # nvm # too slow
