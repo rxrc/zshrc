@@ -90,5 +90,8 @@ export CARGO_HOME=${CARGO_HOME:-$XDG_CACHE_HOME/cargo}
 # Set The Haskell Tool Stack path.
 export STACK_ROOT=${STACK_ROOT:-$XDG_CONFIG_HOME/stack}
 
+# Set Poetry path.
+export POETRY_HOME=${POETRY_HOME:-$XDG_DATA_HOME/poetry}
+
 # Disable AWS prompt.
 SHOW_AWS_PROMPT=false

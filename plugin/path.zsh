@@ -7,6 +7,9 @@ paths=(
   # Go binaries
   $GOPATH/bin
 
+  # Poetry binaries
+  $POETRY_HOME/bin
+
   # Local binaries
   $HOME/.local/bin
 )
