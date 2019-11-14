@@ -130,9 +130,10 @@ oh_my_zsh_plugins+=(
 
 ## Python
 oh_my_zsh_plugins+=(
+  # pyenv
   pep8
   pip
-  # pyenv
+  poetry
   pylint
   python
 )
