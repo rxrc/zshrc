@@ -93,5 +93,8 @@ export STACK_ROOT=${STACK_ROOT:-$XDG_CONFIG_HOME/stack}
 # Set Poetry path.
 export POETRY_HOME=${POETRY_HOME:-$XDG_DATA_HOME/poetry}
 
+# Set WakaTime path.
+export WAKATIME_HOME=${WAKATIME_HOME:-$XDG_DATA_HOME/wakatime}
+
 # Disable AWS prompt.
 SHOW_AWS_PROMPT=false
