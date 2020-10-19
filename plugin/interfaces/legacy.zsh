@@ -195,5 +195,5 @@ kctx () {
 }
 
 # Load nvm
-alias load_nvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
-alias nvm='unalias nvm && load_nvm && nvm'
+# alias load_nvm='[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"'
+# alias nvm='unalias nvm && load_nvm && nvm'

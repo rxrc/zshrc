@@ -123,7 +123,7 @@ oh_my_zsh_plugins+=(
 
 ## Node
 oh_my_zsh_plugins+=(
-  # nvm # too slow
+  nvm
   npm
   yarn
 )
