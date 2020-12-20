@@ -6,6 +6,12 @@ fi
 
 if [[ -x $(command -v gh) ]]; then
   ghver () {
-    jq -nc '{"event_type":"version","client_payload":{"version":"'$1'"}}' | gh api repos/:owner/:repo/dispatches --input - | echo
+    # UPSTREAM: https://github.com/cli/cli/issues/2657
+    # jq -nc '{"event_type":"version","client_payload":{"version":"'$1'"}}' | gh api repos/:owner/:repo/dispatches --input - | echo
+    curl --fail \
+      -H "Authorization: token $GITHUB_TOKEN" \
+      -H 'Accept: application/vnd.github.v3+json' \
+      -d '{"event_type":"version","client_payload":{"version":"v'$1'"}}' \
+      -X POST "https://api.github.com/repos/$(jq -r .repository < package.json)/dispatches"
   }
 fi
