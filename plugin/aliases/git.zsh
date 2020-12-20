@@ -11,7 +11,7 @@ if [[ -x $(command -v gh) ]]; then
     curl --fail \
       -H "Authorization: token $GITHUB_TOKEN" \
       -H 'Accept: application/vnd.github.v3+json' \
-      -d '{"event_type":"version","client_payload":{"version":"v'$1'"}}' \
+      -d '{"event_type":"version","client_payload":{"version":"'$1'"}}' \
       -X POST "https://api.github.com/repos/$(jq -r .repository < package.json)/dispatches"
   }
 fi
