@@ -1,6 +1,7 @@
 # Add Git specific aliases.
 if [[ -x $(command -v git) ]]; then
   alias gfup='git fetch --no-tags upstream'
+  alias gfmk='git fetch --no-tags makenew'
   [[ -x $(command -v gap ) ]] || alias gap='git add --patch'
 fi
 
