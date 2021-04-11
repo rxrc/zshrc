@@ -79,11 +79,6 @@ export AWS_HOME=${AWS_HOME:-$XDG_CONFIG_HOME/aws}
 export AWS_SHARED_CREDENTIALS_FILE=${AWS_SHARED_CREDENTIALS_FILE:-$AWS_HOME/credentials}
 export AWS_CONFIG_FILE=${AWS_CONFIG_FILE:-$AWS_HOME/config}
 
-# Set Go path.
-if [[ -d $HOME/go ]]; then
-  export GOPATH=${GOPATH:-$HOME/go}
-fi
-
 # Set R cargo path.
 export CARGO_HOME=${CARGO_HOME:-$XDG_CACHE_HOME/cargo}
 
