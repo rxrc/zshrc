@@ -10,3 +10,9 @@ if [[ -x $(command -v gh) ]]; then
     jq -nc '{"event_type":"version","client_payload":{"version":"'$1'"}}' | gh api repos/:owner/:repo/dispatches --input - | echo
   }
 fi
+
+if [[ -x $(command -v gh) ]]; then
+  ghrel () {
+    jq -nc '{"event_type":"release","client_payload":{"environment":"'$1'"}}' | gh api repos/:owner/:repo/dispatches --input - | echo
+  }
+fi
