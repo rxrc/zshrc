@@ -16,3 +16,11 @@ if [[ -x $(command -v gh) ]]; then
     jq -nc '{"event_type":"release","client_payload":{"environment":"'$1'"}}' | gh api repos/:owner/:repo/dispatches --input - | echo
   }
 fi
+
+if [[ -x $(command -v gh) ]]; then
+  tag="$(git tag --points-at HEAD --sort -version:refname | head -1)"
+  version="${tag#v}"
+  ghpro () {
+    jq -nc '{"event_type":"release","client_payload":{"environment":"'$1'", "version":"'$version'"}}' | gh api repos/:owner/:repo/dispatches --input - | echo
+  }
+fi
