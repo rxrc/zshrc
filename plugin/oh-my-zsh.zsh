@@ -1,7 +1,6 @@
 # Set additional gems to be wrapped by bundler plugin.
 BUNDLED_COMMANDS=(
   rubocop
-  curate
 )
 
 # Start tmux on ssh login.
