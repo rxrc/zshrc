@@ -140,7 +140,7 @@ oh_my_zsh_plugins+=(
   bundler
   gem
   rake
-  rbenv
+  # rbenv
   ruby
 )
 
@@ -160,6 +160,9 @@ for plugin in $oh_my_zsh_tmux_plugins; do
   zplug "plugins/${plugin}", from:oh-my-zsh, defer:1, \
     if:'[ -x $(command -v tmux) ]'
 done
+
+# Load forked Oh-My-Zsh plugins.
+zplug 'rxfork/oh-my-zsh', use:'plugins/rbenv', defer:1, at:respect-env-paths
 
 zplug "${ZSHRC_REPO}", defer:2, use:plugin
 zplug "${ZSHRC_REPO}", defer:2, use:plugin/interfaces
