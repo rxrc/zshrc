@@ -48,13 +48,6 @@ export FZF_SHARE_PATH=${FZF_SHARE_PATH:-/usr/share/fzf}
 zplug "${FZF_SHARE_PATH}", from:local, defer:1, use:fzf.zsh, \
   if:"[ -f "${FZF_SHARE_PATH}/fzf.zsh" ]"
 
-# Load mlabs plugin.
-# TODO: Loading from private git repos unsupported.
-# zplug 'meltwater/mlabsh' from:git, defer:2, use:team, \
-  # if:"[ -e "${HOME}/meltwater" ]"
-zplug "${HOME}/meltwater/mlabsh", from:local, defer:2, use:'team/*.sh', \
-  if:"[ -e "${HOME}/meltwater/mlabsh" ]"
-
 # Oh-My-Zsh libs to load.
 oh_my_zsh_libs=(
   clipboard
@@ -127,7 +120,7 @@ oh_my_zsh_plugins+=(
 
 ## Python
 oh_my_zsh_plugins+=(
-  pyenv
+  # pyenv
   pep8
   pip
   poetry
@@ -163,6 +156,7 @@ done
 
 # Load forked Oh-My-Zsh plugins.
 zplug 'rxfork/oh-my-zsh', use:'plugins/rbenv', defer:1, at:respect-env-paths
+zplug 'rxfork/oh-my-zsh', use:'plugins/pyenv', defer:1, at:respect-env-paths
 
 zplug "${ZSHRC_REPO}", defer:2, use:plugin
 zplug "${ZSHRC_REPO}", defer:2, use:plugin/interfaces
