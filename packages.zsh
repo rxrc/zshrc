@@ -73,7 +73,6 @@ oh_my_zsh_plugins=()
 ## Core
 oh_my_zsh_plugins+=(
   archlinux
-  autojump
   colored-man-pages
   colorize
   cp
