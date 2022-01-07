@@ -53,7 +53,7 @@ mirrorupg () {
 }
 
 # Start a local http server.
-pyserver () {
+pyhttp () {
   python -m http.server $1
 }
 
