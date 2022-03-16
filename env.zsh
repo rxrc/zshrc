@@ -93,3 +93,6 @@ export WAKATIME_HOME=${WAKATIME_HOME:-$XDG_CONFIG_HOME/wakatime}
 
 # Disable AWS prompt.
 SHOW_AWS_PROMPT=false
+
+# See https://github.com/dandavison/delta/issues/497#issuecomment-1007968317
+LESS=""
