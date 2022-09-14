@@ -116,7 +116,7 @@ oh_my_zsh_plugins+=(
 
 ## Python
 oh_my_zsh_plugins+=(
-  pyenv
+  # pyenv
   pep8
   pip
   poetry
@@ -151,7 +151,8 @@ for plugin in $oh_my_zsh_tmux_plugins; do
 done
 
 # Load forked Oh-My-Zsh plugins.
-zplug 'rxfork/oh-my-zsh', use:'plugins/rbenv', defer:1, at:rbenv-path
+zplug 'rxfork/oh-my-zsh', use:'plugins/pyenv', defer:1, at:env-path
+zplug 'rxfork/oh-my-zsh', use:'plugins/rbenv', defer:1, at:env-path
 
 # Load zsh extensions from local packages.
 zplug "/etc/profile.d", from:local
