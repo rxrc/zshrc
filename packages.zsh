@@ -117,6 +117,16 @@ oh_my_zsh_plugins+=(
   yarn
 )
 
+## Python
+oh_my_zsh_plugins+=(
+  pyenv
+  pep8
+  pip
+  poetry
+  pylint
+  python
+)
+
 ## Ruby
 oh_my_zsh_plugins+=(
   bundler
@@ -144,7 +154,7 @@ for plugin in $oh_my_zsh_tmux_plugins; do
 done
 
 # Load forked Oh-My-Zsh plugins.
-# zplug 'rxfork/oh-my-zsh', use:'plugins/rbenv', defer:1, at:respect-env-paths
+zplug 'rxfork/oh-my-zsh', use:'plugins/rbenv', defer:1, at:respect-env-paths
 
 zplug "${ZSHRC_REPO}", defer:2, use:plugin
 zplug "${ZSHRC_REPO}", defer:2, use:plugin/interfaces
