@@ -117,16 +117,6 @@ oh_my_zsh_plugins+=(
   yarn
 )
 
-## Python
-oh_my_zsh_plugins+=(
-  pyenv
-  pep8
-  pip
-  poetry
-  pylint
-  python
-)
-
 ## Ruby
 oh_my_zsh_plugins+=(
   bundler
