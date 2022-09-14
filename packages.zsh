@@ -153,6 +153,9 @@ done
 # Load forked Oh-My-Zsh plugins.
 zplug 'rxfork/oh-my-zsh', use:'plugins/rbenv', defer:1, at:respect-env-paths
 
+# Load zsh extensions from local packages.
+zplug "/etc/profile.d", from:local
+
 zplug "${ZSHRC_REPO}", defer:2, use:plugin
 zplug "${ZSHRC_REPO}", defer:2, use:plugin/interfaces
 zplug "${ZSHRC_REPO}", defer:2, use:plugin/aliases
