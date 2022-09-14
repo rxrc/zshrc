@@ -90,10 +90,7 @@ oh_my_zsh_plugins+=(
 ## Developer tools
 oh_my_zsh_plugins+=(
   aws
-  docker-compose # TODO: use official?
-  gulp
   helm
-  heroku
   httpie
   kubectl
   terraform
