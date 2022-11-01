@@ -100,7 +100,7 @@ nvg () {
 
 # Upgrade tmuxrc.
 tmuxupg () {
-  if ! [[ -d $HOME/.tmux/plugins/tpm ]]; then
+  if ! [[ -d $XDG_CONFIG_HOME/tmux/plugins/tpm ]]; then
     echo 'tpm is not installed.'
     return 1
   fi
@@ -110,9 +110,9 @@ tmuxupg () {
     return 2
   fi
 
-  $HOME/.tmux/plugins/tpm/bin/update_plugins all && \
-  $HOME/.tmux/plugins/tpm/bin/install_plugins    && \
-  $HOME/.tmux/plugins/tpm/bin/update_plugins all
+  $XDG_CONFIG_HOME/tmux/plugins/tpm/bin/update_plugins all && \
+  $XDG_CONFIG_HOME/tmux/plugins/tpm/bin/install_plugins    && \
+  $XDG_CONFIG_HOME/tmux/plugins/tpm/bin/update_plugins all
 }
 
 # Open Viewnior and hide output.
