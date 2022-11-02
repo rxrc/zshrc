@@ -1,9 +1,9 @@
 # Set Neovim color scheme.
-theme=''
-if [[ -n "${BASE16_THEME}" ]]; then
-  theme="-${BASE16_THEME}"
+if [[ -n "${BASE16_THEME:-}" ]]; then
+  theme="base16-${BASE16_THEME}"
 fi
-export VIM_COLOR="${VIM_COLOR:-base16${theme}}"
+export VIM_COLOR="${VIM_COLOR:-${theme:-OceanicNext}}"
 
 # Set Neovim background.
-export VIM_BACKGROUND=${VIM_BACKGROUND:-$BASE16_TYPE}
+export VIM_BACKGROUND=${VIM_BACKGROUND:-${BASE16_TYPE:-dark}}
+
