@@ -7,8 +7,8 @@ if [[ -f "${ZDOTDIR}/env.zsh" ]]; then
 fi
 
 # Set Base16 theme and type.
-export BASE16_THEME=${BASE16_THEME:-tomorrow}
-export BASE16_TYPE=${BASE16_TYPE:-night}
+export BASE16_THEME=${BASE16_THEME:-onedark}
+export BASE16_TYPE=${BASE16_TYPE:-}
 base16_full_theme="base16-${BASE16_THEME}"
 if [[ -n "${BASE16_TYPE}" ]]; then
   base16_full_theme="${base16_full_theme}-${BASE16_TYPE}"
