@@ -5,5 +5,11 @@ fi
 export VIM_COLOR="${VIM_COLOR:-${theme:-OceanicNext}}"
 
 # Set Neovim background.
-export VIM_BACKGROUND=${VIM_BACKGROUND:-${BASE16_TYPE:-dark}}
+if [[ -n "${BASE16_TYPE:-}" ]]; then
+  background="light"
+  if [[ $BASE16_TYPE =~ "(dark|night|dusk)" ]]; then
+    background="dark"
+  fi
+fi
+export VIM_BACKGROUND=${VIM_BACKGROUND:-${background:-dark}}
 

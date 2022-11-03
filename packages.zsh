@@ -8,8 +8,9 @@ fi
 
 # Set Base16 theme and type.
 export BASE16_THEME=${BASE16_THEME:-tomorrow}
+export BASE16_TYPE=${BASE16_TYPE:-night}
 base16_full_theme="base16-${BASE16_THEME}"
-if [[ -n "${BASE16_TYPE:-}" ]]; then
+if [[ -n "${BASE16_TYPE}" ]]; then
   base16_full_theme="${base16_full_theme}-${BASE16_TYPE}"
 fi
 base16_script="base16-${base16_full_theme}.sh"
