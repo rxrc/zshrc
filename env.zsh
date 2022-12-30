@@ -93,6 +93,9 @@ export WAKATIME_HOME=${WAKATIME_HOME:-$XDG_CONFIG_HOME/wakatime}
 # Disable AWS prompt.
 export SHOW_AWS_PROMPT=false
 
+# See https://github.com/python-poetry/poetry/issues/1917#issuecomment-1235998997
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+
 # See https://github.com/dandavison/delta/issues/497#issuecomment-1007968317
 export LESS=""
 
