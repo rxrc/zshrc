@@ -93,10 +93,13 @@ export WAKATIME_HOME=${WAKATIME_HOME:-$XDG_CONFIG_HOME/wakatime}
 # Disable AWS prompt.
 export SHOW_AWS_PROMPT=false
 
+# Set Python paths.
+export PYTHONPYCACHEPREFIX=${PYTHONPYCACHEPREFIX:-$XDG_CACHE_HOME/python}
+export PYTHONUSERBASE=${PYTHONUSERBASE-$XDG_DATA_HOME/python}
+
 # See https://github.com/python-poetry/poetry/issues/1917#issuecomment-1235998997
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
 
 # See https://github.com/dandavison/delta/issues/497#issuecomment-1007968317
 export LESS=""
-
 export GH_PAGER="less -FRX"
