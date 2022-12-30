@@ -7,7 +7,7 @@ fi
 
 if [[ -x $(command -v gh) ]]; then
   ghver () {
-    jq -nc '{"event_type":"version","client_payload":{"version":"'$1'"}}' | gh api repos/:owner/:repo/dispatches --input - | echo
+    gh workflow run version.yml --raw-field version=$1
   }
 fi
 
