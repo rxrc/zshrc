@@ -32,9 +32,9 @@ zplug "${ZDOTDIR}", from:local, defer:1, use:promptline.zsh, \
   if:"[ "$ZSH_THEME" = 'promptline' -a -f "${ZDOTDIR}/promptline.zsh" ]"
 
 # Load pure.
-zplug 'mafredri/zsh-async', defer:1, \
+zplug 'mafredri/zsh-async', defer:1, from:github, \
   if:"[ $ZSH_THEME = 'pure' ]"
-zplug 'sindresorhus/pure', use:pure.zsh, defer:2, \
+zplug 'sindresorhus/pure', use:pure.zsh, defer:2, from:github, as:theme, \
   if:"[ $ZSH_THEME = 'pure' ]"
 
 # Load autosuggest.
