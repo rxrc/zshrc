@@ -103,3 +103,7 @@ export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
 # See https://github.com/dandavison/delta/issues/497#issuecomment-1007968317
 export LESS=""
 export GH_PAGER="less -FRX"
+
+# Set Android Studio paths..
+export ANDROID_HOME=${WAKATIME_HOME:-$XDG_DATA_HOME/android}
+export ANDROID_USER_HOME=${ANDROID_USER_HOME:-$XDG_CONFIG_HOME/android}
