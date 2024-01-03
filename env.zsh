@@ -107,3 +107,4 @@ export GH_PAGER="less -FRX"
 # Set Android Studio paths..
 export ANDROID_HOME=${WAKATIME_HOME:-$XDG_DATA_HOME/android}
 export ANDROID_USER_HOME=${ANDROID_USER_HOME:-$XDG_CONFIG_HOME/android}
+export ADB_VENDOR_KEYS=${ANDROID_USER_HOME:-$XDG_CONFIG_HOME/android}
