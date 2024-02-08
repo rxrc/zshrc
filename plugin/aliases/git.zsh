@@ -5,6 +5,18 @@ if [[ -x $(command -v git) ]]; then
   [[ -x $(command -v gap ) ]] || alias gap='git add --patch'
 fi
 
+if [[ -x $(command -v git) ]]; then
+  gcome () {
+    git checkout "${USER}/$1" $2
+  }
+fi
+
+if [[ -x $(command -v git) ]]; then
+  gcbme () {
+    git checkout -b "${USER}/$1" $2
+  }
+fi
+
 if [[ -x $(command -v gh) ]]; then
   ghver () {
     gh workflow run version.yml --raw-field version=$1
