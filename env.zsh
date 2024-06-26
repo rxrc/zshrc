@@ -108,3 +108,7 @@ export GH_PAGER="less -FRX"
 export ANDROID_HOME=${ANDROID_HOME:-$XDG_DATA_HOME/android}
 export ANDROID_USER_HOME=${ANDROID_USER_HOME:-$XDG_CONFIG_HOME/android}
 export ADB_VENDOR_KEYS=${ADB_VENDOR_KEYS:-$XDG_CONFIG_HOME/android}
+
+# UPSTREAM: Load pyenv manually as zsh plugin does not do this.
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+command -v pyenv >/dev/null && eval "$(pyenv init -)"
