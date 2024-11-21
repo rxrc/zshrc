@@ -112,3 +112,6 @@ export ADB_VENDOR_KEYS=${ADB_VENDOR_KEYS:-$XDG_CONFIG_HOME/android}
 # UPSTREAM: Load pyenv manually as zsh plugin does not do this.
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 command -v pyenv >/dev/null && eval "$(pyenv init -)"
+
+# UPSTREAM: See https://github.com/httpie/cli/issues/1202
+export REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
